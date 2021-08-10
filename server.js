@@ -67,4 +67,4 @@ app.post('/chat/callback', (req, res) => {
     res.status(200).json(req.body);
 });
 
-server.listen(3000);
+server.listen(process.env.PORT || 3000);
