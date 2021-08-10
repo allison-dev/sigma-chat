@@ -37,7 +37,7 @@ io.on('connection', socket => {
     socket.on("sendMessage", data => {
         messages.push(data);
         // socket.broadcast.emit("recivedMessage", data);
-        axios.post('http://localhost:8000/chat/message', data).then((res) => {
+        axios.post('https://sigmademo.nuvetoapps.com.br/chat/message', data).then((res) => {
             console.log(`statusCode: ${res.status}`);
             console.log(res);
         }).catch((error) => {
@@ -67,4 +67,4 @@ app.post('/chat/callback', (req, res) => {
     res.status(200).json(req.body);
 });
 
-server.listen(3000);
+server.listen(process.env.PORT || 3000);
