@@ -1,0 +1,111 @@
+html,
+body {
+    height: 100%;
+}
+
+* {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+}
+
+#chat {
+    height         : 100%;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    flex-direction : column;
+}
+
+input {
+    width    : 600px;
+    border   : 1px solid #ddd;
+    height   : 50px;
+    padding  : 0 20px;
+    font-size: 14px;
+}
+
+button {
+    width      : 600px;
+    height     : 50px;
+    font-size  : 14px;
+    background : #069;
+    text-align : center;
+    line-height: 50px;
+    font-weight: bold;
+    color      : #FFF;
+    margin-top : 10px;
+}
+
+.messages {
+    display       : flex;
+    flex-direction: column;
+    flex-wrap     : nowrap;
+    width         : 600px;
+    height        : 400px;
+    margin        : 20px 0;
+    border        : 1px solid #ddd;
+    padding       : 20px;
+    overflow-y    : auto;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin : 0;
+}
+
+img {
+    display: block;
+    margin : 0 auto;
+    width  : 100%;
+    height : auto;
+}
+
+#fileslbl {
+    display                  : flex;
+    align-items              : center;
+    justify-content          : center;
+    height                   : 25vh;
+    background-color         : red;
+    color                    : white;
+    padding                  : 16px;
+    text-align               : center;
+    transition               : .5s;
+    animation-duration       : 1s;
+    animation-fill-mode      : forwards;
+    animation-iteration-count: infinite;
+}
+
+#filesfld {
+    display: none;
+}
+
+#progress {
+    width           : 0;
+    background-color: blue;
+    color           : white;
+    font-weight     : bold;
+    font-size       : 14px;
+    line-height     : 25px;
+    padding         : 0 5px;
+}
+
+@keyframes dropbox {
+    0% {
+        background-image: repeating-linear-gradient(30deg, green 1%, green 3%, darkgreen 5%, darkgreen 5%);
+    }
+
+    50% {
+        background-image: repeating-linear-gradient(30deg, darkgreen 1%, darkgreen 3%, green 5%, green 5%);
+    }
+
+    100% {
+        background-image: repeating-linear-gradient(30deg, green 1%, green 3%, darkgreen 5%, darkgreen 5%);
+    }
+}
