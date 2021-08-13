@@ -3,10 +3,10 @@ require('dotenv').config();
 const aws = require('aws-sdk/clients/s3');
 const fs = require('fs');
 
-const accessKeyId = "AKIAYYUXYZXPMZLDQWI5";
-const secretKeyId = "o/3LZ+yBSkz1qAKOBkaQ09L2r2inEbIug0fOlxZ1";
-const bucketRegion = "us-east-1";
-const bucketName = "scriptcase-allison";
+const accessKeyId = process.env.AWS_ACCESS_KEY_ID;
+const secretKeyId = process.env.AWS_SECRET_ACCESS_KEY;
+const bucketRegion = process.env.AWS_S3_REGION;
+const bucketName = process.env.AWS_S3_BUCKET;
 
 const s3 = new aws({
     bucketRegion,
